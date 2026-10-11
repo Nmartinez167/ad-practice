@@ -18,7 +18,7 @@ This repository demonstrates various use cases and examples for managing user ac
 - Windows Server 2022
 - Windows 10 (21H2)
 
-<h2>Use Cases</h2>
+<h2>Use/Cases</h2>
 
 - Account Lockouts
   - How to configure account lockout policies via Group Policy.
@@ -34,21 +34,36 @@ This repository demonstrates various use cases and examples for managing user ac
   - Identifying failed login attempts, account lockouts, and other relevant events in the logs.
 
 
+<h2>Instructions</h2>
+
+**1. Getting Started**
+
+- Log in to the Domain Controller (dc-1) using an administrator account.
+- Ensure you have a user account created in Active Directory for testing purposes.
+
+<img width="50%" height="50%" alt="Screenshot 2026-10-07 081728" src="https://github.com/user-attachments/assets/8b37de2a-a169-4405-8814-0ed1205726a4" />
+
+<img width="50%" height="50%" alt="Screenshot 2026-10-11 143338" src="https://github.com/user-attachments/assets/74aa5e21-2cee-48f9-8c9f-dfbb2bbdb90d" />
+
 **2. Configuring Account Lockout Policies**
 
 - Open the Group Policy Management Console (GPMC) and configure the Account Lockout Policy to lock the account after 5 failed login attempts.
 - Test by attempting 6 failed logins with a bad password.
+  
+<img width="50%" height="50%" alt="Capture1" src="https://github.com/user-attachments/assets/50bcb75b-8e80-4a10-a975-1a58eaa3cbb2" />
 
-
+  <img width="50%" height="50%" alt="Screenshot 2026-10-10 123904" src="https://github.com/user-attachments/assets/9f670796-ca20-400a-a7c4-dc6c390e3a1d" />
+  
 **3. Account Lockout Behavior** 
 
 - Observe that the account locks after the 5th failed attempt.
 - Unlock the account and reset the password for testing.
+  
+<img width="50%" height="50%" alt="Screenshot 2026-10-10 125741" src="https://github.com/user-attachments/assets/3a3a53da-155d-4474-ac13-3b9fb9e43727" />
+
+<img width="50%" height="50%" alt="4" src="https://github.com/user-attachments/assets/167a67b7-a8dc-4b78-83d9-9f8ee08343f2" />
 
 
-- Log in to the Domain Controller (dc-1) using an administrator account.
-- Ensure you have a user account created in Active Directory for testing purposes.
-- 
 **4. Enabling and Disabling Accounts**
 
 - Disable a user account in Active Directory.
@@ -61,6 +76,8 @@ This repository demonstrates various use cases and examples for managing user ac
 
 - View the security logs on the Domain Controller to see the details of login attempts and account lockouts.
 - Check the client machine’s event logs for any relevant information regarding login failures.
+
+<img width="50%" height="50%" alt="Capture45455" src="https://github.com/user-attachments/assets/cdf7b088-1dfd-4b10-a62c-bf1ccec210c2" />
 
 <h2>Purpose</h2>
 The purpose of this repository is to provide hands-on examples and insights into managing Active Directory accounts. It highlights practical scenarios that demonstrate how to configure policies, manage account states, and troubleshoot login issues using various tools and technologies. This repository is designed to help IT professionals and system administrators gain a deeper understanding of Active Directory management.
